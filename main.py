@@ -43,8 +43,8 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
 for num in range(0, len(address_text_list)):
-    chrome_driver_path = Service("C:\SeleniumDrivers\chromedriver.exe") # local driver
-    #chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
+    #chrome_driver_path = Service("C:\SeleniumDrivers\chromedriver.exe") # local driver
+    chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
     driver = webdriver.Chrome(service=chrome_driver_path, chrome_options=options) #
 
     driver.get(google_form_url)
